@@ -4,3 +4,4 @@ ac-comphist.dat
 projectile.cache
 projectile-bookmarks.eld
 *.elc
+.emacs.desktop*

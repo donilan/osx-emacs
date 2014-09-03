@@ -155,3 +155,9 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+
+;; exclude .pyc
+(require 'dired-x)
+(setq-default dired-omit-files-p t)
+(setq dired-omit-files
+      (concat dired-omit-files "^\\.pyc$"))

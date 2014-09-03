@@ -18,6 +18,17 @@
 (add-to-list 'default-frame-alist '(width . 140))
 (add-to-list 'default-frame-alist (cons 'height (get-default-height)))
 
+;; Disable exit key
+;; (defun dont-kill-emacs ()
+;;   (interactive)
+;;   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
+
+;; (global-set-key "\C-x\C-c" 'dont-kill-emacs)
+
+(desktop-save-mode 1)
+
+
+
 ;; (powerline-default-theme)
 ;; (load-theme 'soothe t)
 
