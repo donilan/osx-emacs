@@ -6,6 +6,7 @@
 (depends-on "feature-mode")
 (depends-on "grizzl")
 (depends-on "highlight-indentation")
+(depends-on "magit")
 (depends-on "molokai-theme")
 (depends-on "multiple-cursors")
 (depends-on "powerline")
