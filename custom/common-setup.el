@@ -50,9 +50,9 @@
 (global-visual-line-mode 1)
 
 (display-time)
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;; (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-(scroll-bar-mode nil)
+(scroll-bar-mode -1)
 
 (tool-bar-mode -1)
 
@@ -161,3 +161,6 @@
 (setq-default dired-omit-files-p t)
 (setq dired-omit-files
       (concat dired-omit-files "^\\.pyc$"))
+
+
+;; (require 'org-mac-iCal)

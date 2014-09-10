@@ -6,31 +6,38 @@
 (load "common-setup.el")
 (load "_ruby.el")
 (load "_ac.el")
-(load "_powerline.el")
+;; (load "_powerline.el")
 (load "_smartparents.el")
 (load "_projectile.el")
 
 ;;; Nice size for the default window
-(defun get-default-height ()
-  (/ (- (display-pixel-height) 120)
-     (frame-char-height)))
+;; (defun get-default-height ()
+;;   (/ (- (display-pixel-height) 120)
+;;      (frame-char-height)))
 
-(add-to-list 'default-frame-alist '(width . 140))
-(add-to-list 'default-frame-alist (cons 'height (get-default-height)))
+;; (add-to-list 'default-frame-alist '(width . 140))
+;; (add-to-list 'default-frame-alist (cons 'height (get-default-height)))
 
-;; Disable exit key
+;; Disable exit key:
 ;; (defun dont-kill-emacs ()
 ;;   (interactive)
 ;;   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
 ;; (global-set-key "\C-x\C-c" 'dont-kill-emacs)
 
-(desktop-save-mode 1)
-
+;; (desktop-save-mode 1)
 
 
 ;; (powerline-default-theme)
-;; (load-theme 'soothe t)
+(if (display-graphic-p)
+    (use-package solarized
+                 :init
+                 (progn
+                   (setq solarized-use-variable-pitch nil)
+                   (setq solarized-high-contrast-mode-line t)
+                   (load-theme 'solarized-dark t)))
+  (load-theme 'wombat t))
+;; (load-theme 'solarized-dark t)
 
 
 ;; (custom-set-variables
@@ -49,3 +56,15 @@
 ;;  '(cursor ((t (:background "dark red")))))
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
