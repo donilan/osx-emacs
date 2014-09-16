@@ -14,7 +14,6 @@
 (depends-on "magit")
 (depends-on "molokai-theme")
 (depends-on "multiple-cursors")
-(depends-on "org-mac-iCal")
 (depends-on "powerline")
 (depends-on "projectile")
 (depends-on "purple-haze-theme")

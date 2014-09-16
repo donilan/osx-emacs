@@ -39,6 +39,10 @@
 ;; (defalias 'yes-or-no-p 'y-or-n-p)              
 
 (set-cursor-color "red")
+(set-face-background 'region "yellow")
+;; (require 'cursor-chg)
+;; (toggle-cursor-type-when-idle 1)
+;; (change-cursor-mode 1)
 
 (setq default-frame-alist
       '((cursor-color . "red")))
@@ -164,3 +168,4 @@
 
 
 ;; (require 'org-mac-iCal)
+(require 'dsvn)
